@@ -30,7 +30,7 @@ DEBUG = True
 FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800  # 50MB
 
 
-ALLOWED_HOSTS = [ 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['web-production-3cd8.up.railway.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
