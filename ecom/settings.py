@@ -30,7 +30,7 @@ DEBUG = True
 FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800  # 50MB
 
 
-ALLOWED_HOSTS = ['deploy1-production-84f3.up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [ 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -99,12 +99,13 @@ DATABASES = {
 
         'USER': 'postgres',
 
-        'PASSWORD': 'tBaMRgCySytBvseGANHolQSGszTerIFg',
+        'PASSWORD': 'lPhbqLVvmAUhpIzFZKzPRsfkCjxbPnrf',
 
-        'HOST': 'autorack.proxy.rlwy.net',  # اسم المضيف
-        'PORT': '58014',
+        'HOST': 'monorail.proxy.rlwy.net',  # اسم المضيف
+        'PORT': '36095',
 
     }
+
 
 }
 
