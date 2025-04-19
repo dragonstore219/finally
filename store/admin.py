@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Customer, Product, ProductImage, Order, Profile, FeaturedImage
+from .models import Category, Customer, Product, ProductImage, Order, Profile, FeaturedImage ,Collection
 from django.contrib.auth.models import User
 
 # إدارة صور المنتج
@@ -9,8 +9,9 @@ class ProductImageInline(admin.TabularInline):
 
 # إدارة المنتج
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['name', 'price', 'category', 'is_sale', 'sizes']
+    list_display = ['name', 'price', 'category','type', 'is_sale', 'sizes']
     search_fields = ['name']
+    list_filter = ['category', 'type']
     inlines = [ProductImageInline]
 
 admin.site.register(Product, ProductAdmin)
@@ -18,6 +19,11 @@ admin.site.register(Product, ProductAdmin)
 # تسجيل الفئات
 admin.site.register(Category)
 admin.site.register(Order)
+class CollectionAdmin(admin.ModelAdmin):
+    list_display = ['name', 'description']
+    search_fields = ['name']
+
+admin.site.register(Collection, CollectionAdmin)
 
 # إدارة الملف الشخصي (Profile)
 class ProfileAdmin(admin.ModelAdmin):

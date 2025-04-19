@@ -184,3 +184,7 @@ def register_user(request):
 
 def coming_soon(request):
     return render(request, 'comingsoon.html', {})
+def collection_view(request, type_name):
+    # استخدم تصفية الحقل `type` مباشرة بدلاً من `type__name`
+    products = Product.objects.filter(type=type_name)
+    return render(request, 'collection.html', {'products': products, 'type_name': type_name})
